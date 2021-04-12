@@ -26,7 +26,7 @@ function deleteDigit(n) {
       resultNumber = resultIntermediate;
     }
 
-    testArray.splice(i, originalArray[i]);
+    testArray.splice(i, 0, originalArray[i]);
   }
   return resultNumber;
 }
