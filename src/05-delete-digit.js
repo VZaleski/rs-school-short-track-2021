@@ -10,23 +10,23 @@
  *
  */
 function deleteDigit(n) {
-  const original_array = ("" + number).split('');
-  const test_array = ("" + number).split('');
+  const originalArray = (`${n}`).split('');
+  const testArray = (`${n}`).split('');
   let resultString = '';
   let resultNumber = 0;
   let resultIntermediate = 0;
-  for (let i = 0; i < original_array.length; i++) {
-    test_array.splice(i, 1);
-    for(let j = 0; j < test_array.length; j++) {
-      resultString += test_array[j];
+  for (let i = 0; i < originalArray.length; i++) {
+    testArray.splice(i, 1);
+    for (let j = 0; j < testArray.length; j++) {
+      resultString += testArray[j];
     }
-    resultIntermediate = Number.parseInt(resultString);
+    resultIntermediate = Number.parseInt(resultString, 10);
     resultString = '';
     if (resultIntermediate > resultNumber) {
       resultNumber = resultIntermediate;
     }
 
-    test_array.splice(i, original_array[i]);
+    testArray.splice(i, originalArray[i]);
   }
   return resultNumber;
 }
