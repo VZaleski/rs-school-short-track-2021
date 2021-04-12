@@ -9,7 +9,6 @@ describe('01-matrix-elements-sum', () => {
       [0, 5, 0, 0],
       [2, 0, 3, 3],
     ]), 9);
-
     assert.strictEqual(getMatrixElementsSum([
       [1, 2, 3, 4],
       [0, 5, 0, 0],
